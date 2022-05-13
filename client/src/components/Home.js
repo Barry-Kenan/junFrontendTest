@@ -32,7 +32,7 @@ const Home = ({contacts, getContacts,deleteContact}) => {
             </table>
             <div>
                 <NavLink to='/add' >
-                    <button className='button' >Add new contact</button>
+                    <button className='button'>Добавить</button>
                 </NavLink>
             </div>
         </div>
