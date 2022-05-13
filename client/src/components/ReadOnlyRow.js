@@ -1,13 +1,24 @@
 import React from 'react';
+import {useNavigate} from "react-router";
 
-const ReadOnlyRow = ({ contact, handleEditClick, handleDeleteClick }) => {
+const ReadOnlyRow = ({ contact, deleteContact }) => {
+    const navigate = useNavigate()
+
+    const update = (id) => {
+        navigate(`/edit/${id}`)
+    }
     return (
         <tr>
             <td>{contact.firstName}</td>
             <td>{contact.lastName}</td>
             <td>
-                <button type='button'  onClick={event => handleEditClick(event, contact)} >Edit</button>
-                <button type='button'  onClick={() => handleDeleteClick(contact.id)} >Delete</button>
+
+                    <button className='button' type='button' onClick={() => update(contact.id)} >
+                        Изменить
+                    </button>
+                    <button className='button'  type='button' onClick={() => deleteContact(contact.id)} >
+                        Удалить
+                    </button>
             </td>
         </tr>
     );
