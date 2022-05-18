@@ -1,0 +1,24 @@
+{
+  "contacts": [
+    {
+      "firstName": "ANSU",
+      "lastName": "FATI",
+      "id": 1
+    },
+    {
+      "firstName": "HARRY",
+      "lastName": "KANE",
+      "id": 2
+    },
+    {
+      "firstName": "TONY",
+      "lastName": "FRANK",
+      "id": 3
+    },
+    {
+      "firstName": "JEREMY",
+      "lastName": "CLARK",
+      "id": 4
+    }
+  ]
+}

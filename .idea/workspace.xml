@@ -3,9 +3,95 @@
   <component name="ChangeListManager">
     <list default="true" id="c2fd795e-c24e-411c-bd8d-ce8923973cd4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/utils/validators.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/validators.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/api/api.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/assets/images/preloaderWIFI.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/AddContact.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/EditAdd.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/EditContact.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/ReadOnlyRow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/common/FormControls/FormControls.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/common/FormControls/FormControls.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/common/Preloader/Preloader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/common/Preloader/Preloader.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/app-reducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/contacts-reducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/redux-store.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/utils/normalize.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/utils/validators.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/.babelrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/.eslintignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/.eslintrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/.github/FUNDING.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/.github/workflows/node.js.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/.husky/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/.husky/pre-commit" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/__fixtures__/config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/__fixtures__/middlewares/en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/__fixtures__/middlewares/jp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/__fixtures__/middlewares/postbody.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/__fixtures__/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/__fixtures__/seed.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/__tests__/cli/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/__tests__/server/mixins.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/__tests__/server/plural-fake.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/__tests__/server/plural-with-custom-foreign-key.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/__tests__/server/plural.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/__tests__/server/singular-fake.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/__tests__/server/singular.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/__tests__/server/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/__tests__/server/validate-data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/public/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/public/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/routes.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/src/cli/bin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/src/cli/example.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/src/cli/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/src/cli/run.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/src/cli/utils/is.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/src/cli/utils/load.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/src/server/body-parser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/src/server/defaults.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/src/server/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/src/server/mixins.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/src/server/rewriter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/src/server/router/delay.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/src/server/router/get-full-url.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/src/server/router/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/src/server/router/nested.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/src/server/router/plural.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/src/server/router/singular.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/src/server/router/validate-data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/src/server/router/write.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/src/server/utils.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +126,9 @@
       <workItem from="1652419416461" duration="365000" />
       <workItem from="1652420243754" duration="18000" />
       <workItem from="1652436910195" duration="1090000" />
+      <workItem from="1652438402518" duration="594000" />
+      <workItem from="1652529575584" duration="22000" />
+      <workItem from="1652844823431" duration="306000" />
     </task>
     <servers />
   </component>
