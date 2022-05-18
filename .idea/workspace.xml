@@ -92,11 +92,22 @@
       <change beforePath="$PROJECT_DIR$/json-server/src/server/router/validate-data.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/json-server/src/server/router/write.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/json-server/src/server/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddContact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddContact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EditContact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditContact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/FormControls/FormControls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/FormControls/FormControls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -128,7 +139,7 @@
       <workItem from="1652436910195" duration="1090000" />
       <workItem from="1652438402518" duration="594000" />
       <workItem from="1652529575584" duration="22000" />
-      <workItem from="1652844823431" duration="306000" />
+      <workItem from="1652844823431" duration="6924000" />
     </task>
     <servers />
   </component>

@@ -1,18 +1,12 @@
 import React from 'react';
-import {Field,  reduxForm} from "redux-form";
 import {compose} from "redux";
 import {connect} from "react-redux";
 import {addContact} from "../redux/contacts-reducer";
 import {useNavigate} from "react-router";
-import {NavLink} from "react-router-dom";
-import {maxLengthCreator, minLengthCreator, onlyLetters, required} from "../utils/validators";
-import {Input} from "./common/FormControls/FormControls";
-import {upper} from "../utils/normalize";
 import s from "./EditAdd.module.css"
+import EditAddContactForm from "./common/EditAddForm";
 
 
-const maxLength20 = maxLengthCreator(20)
-const minLength2 = minLengthCreator(2)
 
 const AddContact = (props) => {
     let users = props.contacts
@@ -34,31 +28,13 @@ const AddContact = (props) => {
     return (
         <div className={s.container}>
             <h2>Добавить новый контакт</h2>
-            <AddContactReduxForm onSubmit={onSubmit}/>
+            <EditAddContactForm onSubmit={onSubmit}/>
         </div>
 
     );
 };
 
-const AddContactForm = (props) => {
-    return (
-        <div>
-            <div className={s.home}>
-                <NavLink to='/'>Вернуться в главное меню</NavLink>
-            </div>
-            <form onSubmit={props.handleSubmit} >
-                <Field name={"firstName"} placeholder={"Enter a firstname ..."} validate={[required, maxLength20, minLength2, onlyLetters]} normalize={upper} component={Input}/>
-                <Field name={"lastName"} placeholder="Enter a lastname ..." validate={[required, maxLength20, minLength2, onlyLetters]} normalize={upper} component={Input}/>
-                <div>
-                    <button disabled={!props.valid} type='submit' className={s.button}>Добавить</button>
-                </div>
-            </form>
-        </div>
 
-    )
-}
-
-const AddContactReduxForm = reduxForm({form: 'AddContact'})(AddContactForm)
 
 
 const mapStateToProps = (state) =>({
