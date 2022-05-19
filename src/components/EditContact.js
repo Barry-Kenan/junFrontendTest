@@ -36,9 +36,9 @@ const EditContact = ({contacts, updateContact}) => {
 
 
     return (
-        <Row>
-            <Col xs={24} md={{span: 12, offset: 6}}>
-                <div className={'app-container'}>
+        <Row justify="center">
+            <Col xs={24} sm={10} md={8}>
+                <div className="app-container">
                     <h2>Изменить контакт</h2>
                     <Divider/>
                     <Space>

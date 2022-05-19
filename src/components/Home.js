@@ -25,18 +25,16 @@ const Home = ({contacts, getContacts, deleteContact, hasError, errorMessage}) =>
 
     return (
         <div className='app-container'>
-            <PageHeader title="Contacts App"/>
-            <Divider/>
-            <Row>
-                <Col xs={24} md={{span: 10, offset: 7}}>
+            <Row justify="center">
+                <Col xs={{span:24}} md={16}>
+                    <PageHeader title="Contacts App"/>
+                    <Divider/>
                     <Table contacts={contacts} deleteContact={deleteContactFunction}/>
                     <Divider/>
                     {hasError ? <><Alert message={errorMessage} type={'error'} closable/> <Divider/> </> : null}
                     <Button type={'primary'} size={'large'} color={'red'} onClick={add}>Добавить</Button>
                 </Col>
             </Row>
-
-
         </div>
     );
 };
