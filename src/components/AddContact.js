@@ -3,9 +3,8 @@ import {compose} from "redux";
 import {connect} from "react-redux";
 import {addContact} from "../redux/contacts-reducer";
 import {useNavigate} from "react-router";
-import s from "./EditAdd.module.css"
-import EditAddContactForm from "./common/EditAddForm";
-
+import EditAddContactForm from "./EditAddContactForm";
+import {Col, Row, Divider, message, PageHeader, Space} from "antd";
 
 
 const AddContact = (props) => {
@@ -26,20 +25,26 @@ const AddContact = (props) => {
         cancel()
     }
     return (
-        <div className={s.container}>
-            <h2>Добавить новый контакт</h2>
-            <EditAddContactForm onSubmit={onSubmit}/>
-        </div>
+        <Row>
+            <Col xs={24} md={{span: 12, offset: 6}}>
+                <div className={"app-container"}>
+                    <h2>Добавить новый контакт</h2>
+                    <Divider/>
+                    <Space>
+                        <EditAddContactForm onSubmit={onSubmit}/>
+                    </Space>
+                </div>
+            </Col>
+        </Row>
+
 
     );
 };
 
 
-
-
-const mapStateToProps = (state) =>({
+const mapStateToProps = (state) => ({
     contacts: state.contacts.contacts
 })
 
-export default compose(connect(mapStateToProps, { addContact }))(AddContact)
+export default compose(connect(mapStateToProps, {addContact}))(AddContact)
 

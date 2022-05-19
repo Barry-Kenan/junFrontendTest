@@ -1,56 +1,6 @@
 .app-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 1rem;
-}
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-th,
-td {
-    border: 1px solid #ffffff;
     text-align: center;
-    padding: 8px;
-    font-size: 32px;
 }
-
-th {
-    background-color: #7FB5FF;
-    border-color: black;
-}
-
-td {
-    background-color: #E8F9FD;
-    border-color: black;
-}
-
-form {
-    display: flex;
-    gap: 5px;
-}
-
-form td:last-child {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-form * {
-    font-size: 28px;
-}
-
-.button{
-    background-color: #A0BCC2;
-    color: black;
-    border: 1px solid #555555;
-    padding: 15px 32px;
-    text-align: center;
-    font-size: 16px;
-}
-
 
 
 

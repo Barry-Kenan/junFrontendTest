@@ -1,52 +1,53 @@
 import React, {useEffect} from 'react';
-import ReadOnlyRow from "./ReadOnlyRow";
 import {compose} from "redux";
 import {connect} from "react-redux";
 import {addContact, deleteContact, getContacts} from "../redux/contacts-reducer";
-import {NavLink} from "react-router-dom";
-import './../App.css'
+import {Button, Divider, message, PageHeader, Row, Col, Alert} from 'antd'
+import Table from "./Table";
+import {useNavigate} from "react-router";
 
-const Home = ({contacts, getContacts,deleteContact}) => {
+const Home = ({contacts, getContacts,deleteContact, hasError, errorMessage}) => {
+    const navigate = useNavigate()
+    const add = () => {
+        navigate(`/add`)
+    }
+
 
     useEffect(() => {
         getContacts()
         console.log('render')
     },[])
 
+    const deleteContactFunction = (id) => {
+        deleteContact(id)
+    }
+
+    console.log(hasError)
+    console.log(errorMessage)
 
     return (
         <div className='app-container'>
-            <table>
-                <thead>
-                <tr>
-                    <th>Имя</th>
-                    <th>Фамилия</th>
-                    <th>Действия</th>
-                </tr>
-                </thead>
-                <tbody>
-                {contacts.map((contact) => (
-                    <ReadOnlyRow key={contact.id} contact={contact} deleteContact={deleteContact}/>)
-                )}
-                </tbody>
-            </table>
-            <div>
-                <NavLink to='/add' >
-                    <button className='button'>Добавить</button>
-                </NavLink>
-            </div>
+            <PageHeader  title="Contacts App"/>
+            <Divider />
+            <Row>
+                <Col xs={24} md={{span: 10, offset:7}}>
+                    <Table contacts={contacts} deleteContact={deleteContactFunction}/>
+                    <Divider />
+                    {hasError?<><Alert message={errorMessage} type={"error"} closable/> <Divider/> </>  : null}
+                    <Button type={"primary"} size={"large"} color={"red"} onClick={add}>Добавить</Button>
+                </Col>
+            </Row>
+
+
         </div>
     );
 };
 
 
-
-
-
-
-
 const mapStateToProps = (state) =>({
-    contacts: state.contacts.contacts
+    contacts: state.contacts.contacts,
+    hasError: state.contacts.hasError,
+    errorMessage: state.contacts.errorMessage
 })
 
 export default compose(connect(mapStateToProps, {getContacts, addContact, deleteContact }))(Home)

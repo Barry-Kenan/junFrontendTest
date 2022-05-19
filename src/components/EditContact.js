@@ -4,10 +4,8 @@ import {connect} from "react-redux";
 import {updateContact} from "../redux/contacts-reducer";
 import {useNavigate} from "react-router";
 import {useParams} from "react-router-dom";
-import s from "./EditAdd.module.css"
-import EditAddContactForm from "./common/EditAddForm";
-
-
+import EditAddContactForm from "./EditAddContactForm";
+import {Col, Divider, message, Row, Space} from "antd";
 
 
 const EditContact = ({contacts, updateContact}) => {
@@ -18,15 +16,16 @@ const EditContact = ({contacts, updateContact}) => {
         (contact) => contact.id === parseInt(userId)
     );
 
-    const firstName = currentContact.firstName
-    const lastName = currentContact.lastName
-
-
+    const getInitialValues = () => {
+        return {
+            firstName: currentContact.firstName,
+            lastName: currentContact.lastName
+        };
+    }
 
     const cancel = () => {
         navigate('/')
     }
-
 
     const onSubmit = (formData) => {
         const id = parseInt(userId)
@@ -34,24 +33,23 @@ const EditContact = ({contacts, updateContact}) => {
         cancel()
     }
 
-    const getInitialValues = () => {
-        return {
-            firstName: firstName,
-            lastName: lastName
-        };
-    }
 
     return (
-        <div className={s.container}>
-            <h2>Изменить контакт</h2>
-            <EditAddContactForm onSubmit={onSubmit} initialValues={getInitialValues()}/>
-        </div>
+        <Row>
+            <Col xs={24} md={{span: 12, offset: 6}}>
+                <div className={"app-container"}>
+                    <h2>Изменить контакт</h2>
+                    <Divider/>
+                    <Space>
+                        <EditAddContactForm onSubmit={onSubmit} initialValues={getInitialValues()}/>
+                    </Space>
+                </div>
+            </Col>
+        </Row>
+
 
     );
 };
-
-
-
 
 
 const mapStateToProps = (state) => ({

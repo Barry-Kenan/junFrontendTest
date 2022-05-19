@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import './App.css'
+import "./App.css"
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Home from "./components/Home";
 import AddContact from "./components/AddContact";
@@ -12,15 +12,16 @@ const App = (props) => {
     useEffect(() => {
         props.initializeApp()
     })
-    if(!props.initialized){
-        return <Preloader />
+    if (!props.initialized) {
+        return <Preloader/>
     }
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={ <Home />}/>
-                <Route path="/add" element={<AddContact />}/>
+                <Route path="/" element={<Home/>}/>
+                <Route path="/add" element={<AddContact/>}/>
                 <Route path="/edit/:id" element={<EditContact/>}/>
+                <Route path="*" element={<div align={"center"}>PAGE NOT FOUND</div> }/>
             </Routes>
         </BrowserRouter>
 
@@ -32,5 +33,5 @@ const mapStateToProps = (state) => ({
     initialized: state.app.initialized
 })
 
-export default connect(mapStateToProps,{initializeApp})(App);
+export default connect(mapStateToProps, {initializeApp})(App);
 
