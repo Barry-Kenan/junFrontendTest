@@ -1,6 +1,6 @@
-import React from "react";
-import preloader from "../../../assets/images/preloaderWIFI.svg";
-import s from './Preloader.module.css'
+import React from 'react';
+import preloader from '../../../assets/images/preloaderWIFI.svg';
+import s from './Preloader.module.css';
 
 
 const Preloader = () => {
@@ -8,8 +8,8 @@ const Preloader = () => {
         <div className={s.content}>
             <img src={preloader}/>
         </div>
-    )
+    );
 
-}
+};
 
 export default Preloader;

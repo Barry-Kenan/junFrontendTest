@@ -1,17 +1,18 @@
 import React from 'react';
-import {compose} from "redux";
-import {connect} from "react-redux";
-import {updateContact} from "../redux/contacts-reducer";
-import {useNavigate} from "react-router";
-import {useParams} from "react-router-dom";
-import EditAddContactForm from "./EditAddContactForm";
-import {Col, Divider, message, Row, Space} from "antd";
+import {compose} from 'redux';
+import {connect} from 'react-redux';
+import {updateContact} from '../redux/contacts-reducer';
+import {useNavigate} from 'react-router';
+import {useParams} from 'react-router-dom';
+import EditAddContactForm from './EditAddContactForm';
+import {Col, Divider, Row, Space} from 'antd';
+import PropTypes from 'prop-types';
 
 
 const EditContact = ({contacts, updateContact}) => {
-    const navigate = useNavigate()
-    const params = useParams()
-    const userId = params.id
+    const navigate = useNavigate();
+    const params = useParams();
+    const userId = params.id;
     const currentContact = contacts.find(
         (contact) => contact.id === parseInt(userId)
     );
@@ -21,23 +22,23 @@ const EditContact = ({contacts, updateContact}) => {
             firstName: currentContact.firstName,
             lastName: currentContact.lastName
         };
-    }
+    };
 
     const cancel = () => {
-        navigate('/')
-    }
+        navigate('/');
+    };
 
     const onSubmit = (formData) => {
-        const id = parseInt(userId)
-        updateContact(id, formData.firstName, formData.lastName)
-        cancel()
-    }
+        const id = parseInt(userId);
+        updateContact(id, formData.firstName, formData.lastName);
+        cancel();
+    };
 
 
     return (
         <Row>
             <Col xs={24} md={{span: 12, offset: 6}}>
-                <div className={"app-container"}>
+                <div className={'app-container'}>
                     <h2>Изменить контакт</h2>
                     <Divider/>
                     <Space>
@@ -51,10 +52,14 @@ const EditContact = ({contacts, updateContact}) => {
     );
 };
 
+EditContact.propTypes = {
+    contacts: PropTypes.array,
+    updateContact: PropTypes.func
+};
 
 const mapStateToProps = (state) => ({
     contacts: state.contacts.contacts
-})
+});
 
-export default compose(connect(mapStateToProps, {updateContact}))(EditContact)
+export default compose(connect(mapStateToProps, {updateContact}))(EditContact);
 

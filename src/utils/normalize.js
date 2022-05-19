@@ -1,1 +1,1 @@
-export const upper = value => value && value.toUpperCase()
+export const upper = value => value && value.toUpperCase();
