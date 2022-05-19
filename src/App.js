@@ -22,7 +22,7 @@ const App = (props) => {
                 <Route path="/" element={<Home/>}/>
                 <Route path="/add" element={<AddContact/>}/>
                 <Route path="/edit/:id" element={<EditContact/>}/>
-                <Route path="*" element={<div align={'center'}>PAGE NOT FOUND</div> }/>
+                <Route path="*" element={<div align={'center'}>PAGE NOT FOUND</div>}/>
             </Routes>
         </BrowserRouter>
 

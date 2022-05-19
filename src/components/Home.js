@@ -49,7 +49,7 @@ Home.propTypes = {
     hasError: PropTypes.bool,
     deleteContact: PropTypes.func,
     getContacts: PropTypes.func,
-    errorMessage :PropTypes.string
+    errorMessage: PropTypes.string
 };
 
 

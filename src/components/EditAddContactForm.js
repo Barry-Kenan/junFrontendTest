@@ -34,7 +34,6 @@ class EditAddContactForm extends React.Component {
                     </form>
                 </div>
             </div>
-
         );
     }
 }

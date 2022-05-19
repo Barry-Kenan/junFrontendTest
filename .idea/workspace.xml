@@ -3,25 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="c2fd795e-c24e-411c-bd8d-ce8923973cd4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/db.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AddContact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddContact.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/EditAddContactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditAddContactForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EditContact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditContact.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/FormControls/FormControls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/FormControls/FormControls.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Preloader/Preloader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Preloader/Preloader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/app-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/app-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/contacts-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/contacts-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reportWebVitals.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/setupTests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/normalize.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/normalize.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/validators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/validators.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +63,7 @@
       <workItem from="1652870616138" duration="302000" />
       <workItem from="1652875926052" duration="3517000" />
       <workItem from="1652921907183" duration="6247000" />
-      <workItem from="1652933850133" duration="1545000" />
+      <workItem from="1652933850133" duration="3191000" />
     </task>
     <servers />
   </component>

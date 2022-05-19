@@ -31,8 +31,9 @@ const _Table = ({contacts, deleteContact}) => {
             align: 'center',
             render: (data) => (
                 <Space size="small">
-                    <Button onClick={()=>update(data.id)} type={'primary'} icon={<RedoOutlined />}>Изменить</Button>
-                    <Button onClick={() => deleteContact(data.id)} type={'primary'} icon={<DeleteOutlined />}>Удалить</Button>
+                    <Button onClick={() => update(data.id)} type={'primary'} icon={<RedoOutlined/>}>Изменить</Button>
+                    <Button onClick={() => deleteContact(data.id)} type={'primary'}
+                        icon={<DeleteOutlined/>}>Удалить</Button>
                 </Space>
             ),
         }
@@ -41,7 +42,7 @@ const _Table = ({contacts, deleteContact}) => {
 
     return (
         <>
-            <Table columns={columns} dataSource={data}  size={'large'}  bordered/>
+            <Table columns={columns} dataSource={data} size={'large'} bordered/>
         </>
     );
 };
