@@ -16,15 +16,12 @@ const Home = ({contacts, getContacts, deleteContact, hasError, errorMessage}) =>
 
     useEffect(() => {
         getContacts();
-        console.log('render');
     }, []);
 
     const deleteContactFunction = (id) => {
         deleteContact(id);
     };
 
-    console.log(hasError);
-    console.log(errorMessage);
 
     return (
         <div className='app-container'>
