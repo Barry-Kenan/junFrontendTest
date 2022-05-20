@@ -2,20 +2,16 @@ import React from 'react';
 import {compose} from 'redux';
 import {connect} from 'react-redux';
 import {updateContact} from '../redux/contacts-reducer';
-import {useNavigate} from 'react-router';
-import {useParams} from 'react-router-dom';
-import EditAddContactForm from './EditAddContactForm';
-import {Col, Divider, Row, Space} from 'antd';
 import PropTypes from 'prop-types';
+import EditAdd from './EditAdd';
 
 
-const EditContact = ({contacts, updateContact}) => {
-    const navigate = useNavigate();
-    const params = useParams();
-    const userId = params.id;
+const EditContact = ({contacts, updateContact, isModalVisible, handleCancel, userId}) => {
+
     const currentContact = contacts.find(
-        (contact) => contact.id === parseInt(userId)
+        (contact) => contact.id === userId
     );
+
 
     const getInitialValues = () => {
         return {
@@ -24,37 +20,28 @@ const EditContact = ({contacts, updateContact}) => {
         };
     };
 
-    const cancel = () => {
-        navigate('/');
-    };
 
     const onSubmit = (formData) => {
-        const id = parseInt(userId);
+        const id = userId;
         updateContact(id, formData.firstName, formData.lastName);
-        cancel();
     };
 
 
     return (
-        <Row justify="center">
-            <Col xs={24} sm={10} md={8}>
-                <div className="app-container">
-                    <h2>Изменить контакт</h2>
-                    <Divider/>
-                    <Space>
-                        <EditAddContactForm onSubmit={onSubmit} initialValues={getInitialValues()}/>
-                    </Space>
-                </div>
-            </Col>
-        </Row>
-
+        <EditAdd onSubmit={onSubmit} isModalVisible={isModalVisible}
+            handleCancel={handleCancel} title={'Изменить контакт'}
+            label={'Изменить'} initialValues={getInitialValues()}/>
 
     );
 };
 
 EditContact.propTypes = {
     contacts: PropTypes.array,
-    updateContact: PropTypes.func
+    updateContact: PropTypes.func,
+    handleCancel: PropTypes.func,
+    isModalVisible: PropTypes.bool,
+    userId: PropTypes.number
+
 };
 
 const mapStateToProps = (state) => ({

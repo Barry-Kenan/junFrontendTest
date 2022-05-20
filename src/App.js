@@ -2,8 +2,6 @@ import React, {useEffect} from 'react';
 import './App.css';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Home from './components/Home';
-import AddContact from './components/AddContact';
-import EditContact from './components/EditContact';
 import {initializeApp} from './redux/app-reducer';
 import {connect} from 'react-redux';
 import Preloader from './components/common/Preloader/Preloader';
@@ -20,8 +18,6 @@ const App = (props) => {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home/>}/>
-                <Route path="/add" element={<AddContact/>}/>
-                <Route path="/edit/:id" element={<EditContact/>}/>
                 <Route path="*" element={<div align={'center'}>PAGE NOT FOUND</div>}/>
             </Routes>
         </BrowserRouter>

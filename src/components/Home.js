@@ -1,40 +1,55 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {compose} from 'redux';
 import {connect} from 'react-redux';
 import {deleteContact, getContacts} from '../redux/contacts-reducer';
 import {Button, Divider, PageHeader, Row, Col, Alert} from 'antd';
 import Table from './Table';
-import {useNavigate} from 'react-router';
 import PropTypes from 'prop-types';
+import AddContact from './AddContact';
+import EditContact from './EditContact';
 
 const Home = ({contacts, getContacts, deleteContact, hasError, errorMessage}) => {
-    const navigate = useNavigate();
-    const add = () => {
-        navigate('/add');
-    };
+    const [userId, setUserId] = useState(null);
 
+    const [isAddModalVisible, setIsAddModalVisible] = useState(false);
+    const [isEditModalVisible, setIsEditModalVisible] = useState(false);
+
+    const showAddModal = () => {setIsAddModalVisible(true);};
+    const cancelAddModal = () => {setIsAddModalVisible(false);};
+
+
+    const showEditModal = (id) => {
+        setIsEditModalVisible(true);
+        setUserId(id);
+    };
+    const cancelEditModal = () => {setIsEditModalVisible(false);};
 
     useEffect(() => {
         getContacts();
     }, []);
 
-    const deleteContactFunction = (id) => {
-        deleteContact(id);
-    };
 
+    const deleteContactFunction = (id) => {deleteContact(id);};
 
     return (
         <div className='app-container'>
+
             <Row justify="center">
-                <Col xs={{span:24}} md={16}>
+                <Col xs={{span: 24}} md={16}>
                     <PageHeader title="Contacts App"/>
                     <Divider/>
-                    <Table contacts={contacts} deleteContact={deleteContactFunction}/>
+                    <Table contacts={contacts} deleteContact={deleteContactFunction} showEditModal={showEditModal}/>
                     <Divider/>
                     {hasError ? <><Alert message={errorMessage} type={'error'} closable/> <Divider/> </> : null}
-                    <Button type={'primary'} size={'large'} color={'red'} onClick={add}>Добавить</Button>
+                    <Button type={'primary'} size={'large'} color={'red'} onClick={showAddModal}>Добавить</Button>
+                    <AddContact isModalVisible={isAddModalVisible} handleCancel={cancelAddModal}/>
+                    {isEditModalVisible ?
+                        <EditContact isModalVisible={isEditModalVisible} handleCancel={cancelEditModal} userId={userId}/> : null}
+
                 </Col>
             </Row>
+
+
         </div>
     );
 };

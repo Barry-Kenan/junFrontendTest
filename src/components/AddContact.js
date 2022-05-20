@@ -2,18 +2,11 @@ import React from 'react';
 import {compose} from 'redux';
 import {connect} from 'react-redux';
 import {addContact} from '../redux/contacts-reducer';
-import {useNavigate} from 'react-router';
-import EditAddContactForm from './EditAddContactForm';
-import {Col, Row, Divider, Space} from 'antd';
 import PropTypes from 'prop-types';
+import EditAdd from './EditAdd';
 
 
-const AddContact = ({contacts, addContact}) => {
-
-    const navigate = useNavigate();
-    const cancel = () => {
-        navigate('/');
-    };
+const AddContact = ({contacts, addContact, isModalVisible, handleCancel}) => {
 
     const onSubmit = (formData) => {
         const newContact = {
@@ -22,28 +15,23 @@ const AddContact = ({contacts, addContact}) => {
             lastName: formData.lastName
         };
         addContact(newContact);
-        cancel();
     };
-    return (
-        <Row justify="center">
-            <Col xs={24} sm={10} md={8}>
-                <div className={'app-container'}>
-                    <h2>Добавить новый контакт</h2>
-                    <Divider/>
-                    <Space>
-                        <EditAddContactForm onSubmit={onSubmit}/>
-                    </Space>
-                </div>
-            </Col>
-        </Row>
 
+
+    return (
+        <EditAdd onSubmit={onSubmit} isModalVisible={isModalVisible}
+            handleCancel={handleCancel} title={'Добавить новый контакт'}
+            label={'Добавить'}/>
 
     );
 };
 
 AddContact.propTypes = {
     contacts: PropTypes.array,
-    addContact: PropTypes.func
+    addContact: PropTypes.func,
+    handleCancel: PropTypes.func,
+    isModalVisible: PropTypes.bool,
+    label: PropTypes.string
 };
 
 

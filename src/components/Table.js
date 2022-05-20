@@ -1,14 +1,11 @@
 import React from 'react';
 import {Button, Space, Table} from 'antd';
-import {useNavigate} from 'react-router';
 import {DeleteOutlined, RedoOutlined} from '@ant-design/icons';
 import PropTypes from 'prop-types';
 
-const _Table = ({contacts, deleteContact}) => {
-    const navigate = useNavigate();
-    const update = (id) => {
-        navigate(`/edit/${id}`);
-    };
+const _Table = ({contacts, deleteContact, showEditModal}) => {
+
+
 
     const data = contacts.map(item => ({...item, key: item.id}));
 
@@ -31,7 +28,8 @@ const _Table = ({contacts, deleteContact}) => {
             align: 'center',
             render: (data) => (
                 <Space size="small">
-                    <Button onClick={() => update(data.id)} type={'primary'} icon={<RedoOutlined/>}>Изменить</Button>
+                    <Button onClick={()=>showEditModal(data.id)} type={'primary'}
+                        icon={<RedoOutlined/>}>Изменить</Button>
                     <Button onClick={() => deleteContact(data.id)} type={'primary'}
                         icon={<DeleteOutlined/>}>Удалить</Button>
                 </Space>
@@ -42,14 +40,15 @@ const _Table = ({contacts, deleteContact}) => {
 
     return (
         <>
-            <Table columns={columns} dataSource={data} size={'large'} bordered/>
+            <Table columns={columns} dataSource={data} size={'large'} bordered pagination={{showQuickJumper:true, defaultPageSize:5}}/>
         </>
     );
 };
 
 _Table.propTypes = {
     contacts: PropTypes.array,
-    deleteContact: PropTypes.func
+    deleteContact: PropTypes.func,
+    showEditModal: PropTypes.func
 };
 
 export default _Table;
